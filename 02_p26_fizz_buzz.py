@@ -1,9 +1,9 @@
 def fb(n):
-    if i % 15 == 0:
+    if n % 15 == 0:
         str = 'FizzBuzz'
-    elif i % 3 == 0:
+    elif n % 3 == 0:
         str = 'Fizz'
-    elif i % 5 == 0:
+    elif n % 5 == 0:
         str = 'Buzz'
     else:
         str = ''
