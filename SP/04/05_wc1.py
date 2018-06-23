@@ -36,12 +36,15 @@ def wc(f):
         print(' ', array[0], array[1])
 
 
-if len(sys.argv) > 1:
+if len(sys.argv) == 1:
+    f = sys.stdin
+elif len(sys.argv) == 2:
     try:
-        f = open(sys.argv[1], mode='r', encoding='utf-8')
+        f = open(sys.argv[1], 'rU')
     except IOError:
         sys.exit('Error No such file or directory: \'%s\'' % sys.argv[1])
 else:
-    f = sys.stdin
+    sys.exit('Usege: python %s input' % sys.argv[0])
+
 wc(f)
 f.close()
